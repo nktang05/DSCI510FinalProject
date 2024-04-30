@@ -1,6 +1,12 @@
 import streamlit as st
+import matplotlib
+
+# Specify the backend explicitly
+matplotlib.use("Agg")  # Use the Agg backend
+
 import matplotlib.pyplot as plt
 import numpy as np
+
 
 
 foodItem = st.text_input("Enter Food Type")
@@ -18,7 +24,7 @@ st.write('You selected Series ID:', option)
 st.write("You selected Food Item: ", optionsList[option])
 
 
-st.imapge('testing.png', caption = "testing stuff")
+st.image('testing.png', caption = "testing stuff")
 
 arr = np.random.normal(1, 1, size=100)
 fig, ax = plt.subplots()
