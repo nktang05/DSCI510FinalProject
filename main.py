@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib
+import matplotlib.pyplot as plt
 
 st.write("hello World")
 
@@ -26,4 +26,7 @@ st.write("You selected Food Item: ", option)
 st.image('testing.png', caption="testing stuff")
 
 
+fig = plt.figure() 
+plt.plot([1, 2, 3, 4, 5]) 
 
+st.pyplot(fig)
