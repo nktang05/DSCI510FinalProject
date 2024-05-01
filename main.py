@@ -1,10 +1,7 @@
 import streamlit as st
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
-
-# Specify the backend explicitly
-import matplotlib
-matplotlib.use("Agg")  # Use the Agg backend
+import matplotlib.pyplot as plt
 
 foodItem = st.text_input("Enter Food Type")
 
@@ -21,9 +18,8 @@ st.write("You selected Food Item: ", myDict.get(option, "Not found"))
 
 st.image('testing.png', caption="testing stuff")
 
-arr = np.random.normal(1, 1, size=100)
-fig, ax = plt.subplots()
-ax.hist(arr, bins=20)
+fig = plt.figure() 
+plt.plot([1, 2, 3, 4, 5]) 
 
 st.pyplot(fig)
 
