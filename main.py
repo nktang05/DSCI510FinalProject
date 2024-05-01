@@ -18,8 +18,8 @@ option = st.selectbox(
 
 selected_key = next(key for key, value in myDict.items() if value == option)
 
-st.write('You selected Series ID:', option)
-st.write("You selected Food Item: ", myDict.get(option, "Not found"))
+st.write('You selected Series ID:', selected_key)
+st.write("You selected Food Item: ", option)
 
 st.image('testing.png', caption="testing stuff")
 
