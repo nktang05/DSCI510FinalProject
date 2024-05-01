@@ -24,3 +24,6 @@ fig = plt.figure()
 plt.plot([1, 2, 3, 4, 5]) 
 
 st.pyplot(fig)
+
+import sys
+print(sys.path)
