@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+st.write("hello World")
+
 foodItem = st.text_input("Enter Food Type")
 st.write("Your chosen food item", foodItem)
 
