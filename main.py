@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import sqlite3
-import seaborn as sns
 import requests
 from bs4 import BeautifulSoup
 
@@ -206,7 +205,7 @@ def groceryTable(table):
     fig = plt.figure(figsize=(10, 6))
     
     # Box-and-whisker plot
-    sns.boxplot(x='Year', y='Price', data=data2_sorted, whis=[0, 100])
+    #sns.boxplot(x='Year', y='Price', data=data2_sorted, whis=[0, 100])
     plt.title('Box-and-Whisker Plot for Prices of ' + result_dict[table])
     plt.xlabel('Year')
     plt.ylabel('Price')
@@ -227,4 +226,4 @@ def groceryTable(table):
 region = regionString("West")
 result_dict = getSeriesIdDict("beef", region)
 grocery("APU0400703112", result_dict)
-groceryTable('APU0400703112')
+#groceryTable('APU0400703112')
