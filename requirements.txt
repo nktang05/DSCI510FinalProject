@@ -3,5 +3,4 @@ pandas
 numpy
 matplotlib
 sqlalchemy
-sqlite3
-BeautifulSoup
+bs4

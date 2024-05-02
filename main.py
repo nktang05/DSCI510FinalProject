@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import sqlite3
 import requests
 from bs4 import BeautifulSoup
+import loadData
 
 
 
@@ -217,13 +218,13 @@ def groceryTable(table):
 
 
 # LOAD ALL DATA
-#loadData.get_obesity_data()
-#loadData.get_pop_data()
-#loadData.get_state_data()
-#loadData.get_series_data()
+loadData.get_obesity_data()
+loadData.get_pop_data()
+loadData.get_state_data()
+loadData.get_series_data()
 
 #OTHER TESTING
-region = regionString("West")
-result_dict = getSeriesIdDict("beef", region)
-grocery("APU0400703112", result_dict)
+#region = regionString("West")
+#result_dict = getSeriesIdDict("beef", region)
+#grocery("APU0400703112", result_dict)
 #groceryTable('APU0400703112')
