@@ -4,3 +4,4 @@ numpy
 matplotlib
 sqlalchemy
 bs4
+sqlite3
