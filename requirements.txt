@@ -2,3 +2,9 @@ streamlit
 pandas
 numpy
 matplotlib
+sqlite3
+datetime
+os
+requests
+BeautifulSoup
+seaborn
