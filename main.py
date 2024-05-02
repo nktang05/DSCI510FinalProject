@@ -72,7 +72,7 @@ sql_query9 = "SELECT Name From states Where Region = 'West' "
 data9 = pd.read_sql(sql_query9, conn)
 
 print(data9)
-st.write(data9)
+
 
 conn.commit()
 conn.close()
