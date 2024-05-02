@@ -1,13 +1,8 @@
 import streamlit as st
-import sqlite3
-import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import os
-import requests
-from bs4 import BeautifulSoup
-import seaborn as sns
+
 
 
 st.write("hello World")
