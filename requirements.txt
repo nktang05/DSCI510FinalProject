@@ -4,4 +4,4 @@ numpy
 matplotlib
 sqlalchemy
 sqlite3
-
+BeautifulSoup
