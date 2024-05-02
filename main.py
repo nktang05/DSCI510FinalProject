@@ -1,42 +1,38 @@
-import pandas as pd
 import streamlit as st
-from sqlalchemy import create_engine
+import sqlite3
+import datetime
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+import requests
+from bs4 import BeautifulSoup
+import seaborn as sns
 
-# Define the function to feed state data into the database
-def feed_state_data(filename, table_name):
-    # Create SQLAlchemy engine
-    engine = create_engine('sqlite:///tang.db', echo=False)
 
-    # Read Excel file into a DataFrame
-    data = pd.read_excel(filename)
-    data.dropna(inplace=True)
+st.write("hello World")
 
-    # Write DataFrame to SQLite table
-    data.to_sql(table_name, engine, if_exists='replace', index=False)
+foodItem = st.text_input("Enter Food Type")
+st.write("Your chosen food item", foodItem)
 
-    # Execute a query to fetch some data from the table (for testing)
-    query_result = engine.execute(f'SELECT * FROM {table_name} LIMIT 2').fetchall()
-    print(query_result)
+myDict = {1: "one", 2: "two", 3: "three", 4: "four"}
 
-# Define the function to get state data
-def get_state_data():
-    # Get state data from Excel
-    statexlsx = "states.xlsx"
-    feed_state_data(statexlsx, "states")
+optionsList = list(myDict.values())
 
-# Call the function to get state data
-get_state_data()
+option = st.selectbox(
+    'What option would you like?',
+    optionsList)
 
-# Create SQLAlchemy engine
-engine = create_engine('sqlite:///tang.db', echo=False)
+selected_key = next(key for key, value in myDict.items() if value == option)
 
-## Your code here
+"""
+st.write('You selected Series ID:', selected_key)
+st.write("You selected Food Item: ", option)
 
-sql_query9 = "SELECT Name FROM states WHERE Region = 'West'"
+st.image('testing.png', caption="testing stuff")
+"""
 
-# Execute the SQL query and load the results into a DataFrame
-data9 = pd.read_sql(sql_query9, engine)
+fig = plt.figure() 
+plt.plot([1, 2, 3, 4, 5]) 
 
-st.write(data9)
-
-print(data9)
+st.pyplot(fig)
