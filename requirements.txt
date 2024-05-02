@@ -3,4 +3,6 @@ pandas
 numpy
 matplotlib
 sqlalchemy
+seaborn
+sqlite3
 
