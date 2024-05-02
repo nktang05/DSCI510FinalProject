@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import sqlite3
-import loadData
 import seaborn as sns
 import requests
 from bs4 import BeautifulSoup
